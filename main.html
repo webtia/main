@@ -14,9 +14,11 @@
   <header>
     <nav>
       <!--로고 -->
-      <h1><a href="#">보스턴치과</a></h1>
+      <h1><a href="#">보 스 턴 치 과</a></h1>
       <ul class="gnb">
         <li class="main"><a href="#">Greeting</a>
+        </li>
+        <li class="main"><a href="#">Media</a>
         </li>
         <li class="main"><a href="#">Interior</a>
         </li>
@@ -28,13 +30,14 @@
             <li><a href="#">충치치료</a></li>
           </ul>
         </li>
-        <li class="main"><a href="#">Media</a>
-        </li>
         <li class="main"><a href="#">Guidance</a>
+
+
+
+        <li class="main"><a href="#">Map</a>
+        </li>
         </li>
         <li class="main"><a href="#">Review</a>
-        </li>
-        <li class="main"><a href="#">Map</a>
         </li>
         <li class="main"><a href="#">Notice</a>
           <ul class="sub">
@@ -47,7 +50,59 @@
 
     <!-- 비쥬얼 -->
     <section>
-      <img src="image/dentist_01.png" alt="">
+
+      <div class="fadeShow">
+        <div class="changeimg">
+          <ul>
+            <li class="imgVisible">
+              <div class="des textVisible">
+                <h3>Boston dentist</h3>
+                <p>1395년 창건된 조선의 으뜸 궁궐.</p>
+                <p>북으로 북악산을 기대어 자리 잡은 수도서울의 중심 경복궁,<br>격조 높고 품위 있는 왕실문화의 진수를 경험하세요.</p>
+                <p><a href="#none">자세히보기</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="des">
+                <h3>광화문</h3>
+                <p>조선 법궁인 경복궁의 정문.</p>
+                <p>다른 궁궐들의 정문과는 달리 높은 석축과 누각으로<br>마치 성곽의 성문과 같은 격식으로 장대하게 지어졌습니다.</p>
+                <p><a href="#none">자세히보기</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="des">
+                <h3>근정전</h3>
+                <p>경복궁의 정전(正殿).</p>
+                <p>궁궐 내 가장 규모가 크고 격식을 갖춘 건물로<br>조회의식, 대례(大禮) 등 중요행사를 치르던 곳입니다.</p>
+                <p><a href="#none">자세히보기</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="des">
+                <h3>경회루</h3>
+                <p>침전영역 서쪽 연못 안에 조성된 누각.</p>
+                <p>임금과 신하, 외국사신등 연회장소로 사용,<br>경복궁 중건당시 나라의 가뭄이 들 때 기우제를 지내던 곳입니다.</p>
+                <p><a href="#none">자세히보기</a></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 좌우버튼 -->
+        <div class="side_btn">
+          <a class="lbtn" href="#"><span class="icon xi-angle-left-thin"></span></a>
+          <a class="rbtn" href="#"><span class="icon xi-angle-right-thin"></span></a>
+        </div>
+      </div>
+
+
+
+
+      <!-- 
+      <div class="visual">
+        <img src="image/dentist_01.png" alt="">
+      </div > -->
     </section>
 
     <!--병원소개 -->
@@ -62,38 +117,44 @@
           <h3>2. We will become a dental clinic centered on treatment and service.</h3>
           <h3>3. I will become a representative dental clinic in the region.</h3>
         </div>
-
-        <div class="slideShow">
-          <div class="slide">
-            <!-- 슬라이드 이미지 -->
-              <ul>
-                <li><img src="image/greeting_01.jpg" alt=""></li>
-                <li><img src="image/greeting_02.jpg" alt=""></li>
-                <li><img src="image/greeting_03.jpg" alt=""></li>
-                <li><img src="image/greeting_04.jpg" alt=""></li>
-                <li><img src="image/greeting_05.jpg" alt=""></li>
-                <li><img src="image/greeting_06.jpg" alt=""></li>
-                <li><img src="image/greeting_07.jpg" alt=""></li>
-                <li><img src="image/greeting_08.jpg" alt=""></li>
-                <li><img src="image/greeting_09.jpg" alt=""></li>
-              </ul>
-          </div >
-          <div class="slide_side_btn">
-            <div class="preindent">이전보기</div>
-            <div class="nexindent">다음보기</div>
-
-          </div>
-
-        </div>
         
+        
+      <div id="slideShowon">
+        <!-- 메인슬라이드이미지 -->
+        <div class="slideon">
+          <ul>		
+            <li><img src="image/greeting_01.jpg" alt="image1"></li>
+            <li><img src="image/greeting_02.jpg" alt="image2"></li>
+            <li><img src="image/greeting_03.jpg" alt="image3"></li>
+            <li><img src="image/greeting_04.jpg" alt="image4"></li>	
+            <li><img src="image/greeting_05.jpg" alt="image5"></li>	
+          </ul>
+        </div>
+    
+        <div class="slideon_btn">
+          <ul>
+            <li class="indent activeon">m1</li>
+            <li class="indent">m2</li>
+            <li class="indent">m3</li>
+            <li class="indent">m4</li>
+    <!-- 				<li class="indent">m5</li>
+            <li class="indent">m6</li> -->
+          </ul>
+        </div>
+    
+        <div class="sideon_btn">
+          <div class="preon"><img src="image/btn-left.png" alt="이전보기"></div>
+          <div class="nexon"><img src="image/btn-right.png" alt="다음보기"></div>
+        </div>
+    
       </div>
     </section>
 
     <div class="sub_bgbox"></div>
-      <!--서브배경100%박스(메뉴안에는 포함되어 있지않고 헤더안에는 포함되어 있는 위치에 삽입-->
+    <!--서브배경100%박스(메뉴안에는 포함되어 있지않고 헤더안에는 포함되어 있는 위치에 삽입-->
   </header>
 
- 
+
 
 
 

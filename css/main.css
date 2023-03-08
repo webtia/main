@@ -10,7 +10,7 @@ header{
   height: 135px;
   /* background-color: #2b2f3a; */
   position: relative;
-  z-index: 300; /* 메뉴가 맨위로 올라오게 함 */
+  z-index: 200; /* 메뉴가 맨위로 올라오게 함 */
 }
 
 nav{
@@ -28,13 +28,13 @@ nav{
 }
 
 
-/* Main Menu*/
+/* ★★ Main Menu - 제이쿼리(메뉴7-풀다운메뉴 적용) ★ */
 nav h1{
   font-size: 35px;
   font-weight: bold;
   color: #212121;
   line-height:80px;
-  /* border: 1px solid purple; */
+/*   border: 1px solid purple; */
   
 }
 .gnb{
@@ -44,7 +44,7 @@ nav h1{
 
 .gnb>.main{
   width: 150px;
-  text-align: center;
+  margin: auto;
   /* border: 1px solid blue; */
 }
 
@@ -57,8 +57,7 @@ nav h1{
   font-size: 20px;
   font-weight: 450;
   line-height: 50px;
-  border-bottom: 1px solid #cacaca;
-    /* border: 1px solid purple; */
+  /* border: 1px solid purple; */
 }
 
 .gnb>.main:hover>a{color: #337ab7;}
@@ -84,6 +83,7 @@ nav h1{
 .sub li a{
   color: #666;
   font-size: 14px;
+  z-index: 200;
    
 }
 .sub li:hover a{
@@ -99,13 +99,126 @@ nav h1{
 	width:100%;
 	height:230px; 
 	background: #e0e0e0;
+  z-index: 100;
 }
+
+
+/* ★★ visual 3-메인비주얼 fade3적용 ★★*/
+
+
+.fadeShow{
+  /* position:fixed;   */
+  border-top: 1px solid #cacaca;
+	width:100%;
+	height:100vh;
+	margin:auto;
+}
+
+/*(1)이미지 모두 동일한 위치,안보이게 함*/ 
+.changeimg ul li{ 
+	opacity:0;  
+	position:absolute;
+	top:180px;
+	left:0;
+  width: 100%;
+  height:100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform:scale(1.1);
+  transition:all 1.5s;
+}
+.changeimg ul li.imgVisible{   /*->jQuery 에서 불러냄*/
+  opacity:1;
+  z-index:1000; 
+  transform:scale(1);
+}
+
+.changeimg ul li:nth-child(1){background-image:url(../image/dentist_01.avif);}
+.changeimg ul li:nth-child(2){background-image:url(../image/dentist_02.avif);}
+.changeimg ul li:nth-child(3){background-image:url(../image/dentist_03.avif);}
+.changeimg ul li:nth-child(4){background-image:url(../image/dentist_04.avif);}
+
+/*좌우버튼*/
+.icon{
+  font-size: 100px;
+  color: #fff;
+}
+.side_btn .lbtn{
+  position: absolute;
+  top: 500%;
+  z-index: 2000;
+  transform: translateY(-50%);
+  left: 30px;
+  width: 65px;
+  height: 65px;
+}
+.side_btn .lbtn:hover{opacity: 0.5;}
+
+.side_btn .rbtn{
+  position: absolute;
+  top: 500%;
+  transform: translateY(-50%);
+  right: 30px;
+  width: 65px;
+  height: 65px;
+  z-index: 2000;
+}
+.side_btn .rbtn:hover{opacity: 0.5;}
+
+/*비주얼 텍스트 공통*/
+.des{  /*시작위치의 텍스트->Y축으로 20% 지점*/
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-10%);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition:all 1s;
+}
+.des.textVisible{ /*->jQuery 에서 불러냄*/
+  opacity: 1;
+  transform: translate(-50%,-50%);
+}
+
+.des h3{
+  font-size: 52px;
+  text-shadow:0 0 10px #000;
+  font-family: 'Nanum Myeongjo', serif;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 20px;
+}
+.des p{
+  font-size: 17px;
+  line-height: 30px;
+}
+.des p:nth-of-type(3){
+  width:150px;
+  height:42px;
+  background:rgba(0,0,0,0.3);
+  border:1px solid #ccc;
+  text-align: center;
+  line-height: 42px;
+  font-size: 14px;
+  margin: 20px auto;
+  transition: 0.35s;
+}
+.des p:nth-of-type(3):hover{
+  background:rgba(0,0,0,0.6);
+}
+
+
+
+
+
+
 
 /* Greeting Menu */
 .greeting{
   justify-content: center;
   text-align: center;
-   padding: 50px 0px;
+   padding: 100px 0px;
    width: 100%;
    height: 500px;
    
@@ -135,11 +248,100 @@ nav h1{
 .greeting h3:nth-child(4){margin-bottom: 50px;}
 
 
-/* 제이쿼리 슬라이드1을 적용  */
-#slideShow{
-  position: relative;
-  overflow: hidden;
-  width: 1440px;
-  height: 500px;
-  margin: auto;
+/* ★★ 제이쿼리 슬라이드5 적용 ★★  */
+#slideShowon {
+	position: relative;
+	/*부모기준설정*/
+	overflow: hidden;
+	width: 1000px;
+	height: 524px;
+	margin: 0 auto;
+}
+
+#slideShowon .slideon ul {
+	display: flex;
+	position: absolute;
+	width: 3600px;
+	/*슬라이드가 가로방향일때만->이미지의 총가로길이(940*5)*/
+}
+
+#slideShowon .slideon ul li {
+	/* float:left; */
+	width: 1000px;
+	height: 500px;
+}
+
+/* #slideShowon .slideon ul .i1 {
+	background: url(../image/image/greeting_01.jpg);
+}
+
+#slideShowon .slideon ul .i2 {
+	background: url(../image/image/greeting_02.jpg);
+}
+
+#slideShowon .slideon ul .i3 {
+	background: url(../image/image/greeting_03.jpg);
+}
+
+#slideShowon .slideon ul .i4 {
+	background: url(../image/image/greeting_04.jpg);
+}
+
+#slideShowon .slideon ul .i5 {
+	background: url(../image/image/greeting_05.jpg);
+}
+
+#slideShowon .slideon ul .i6 {
+	background: url(../image/image/greeting_06.jpg);
+} */
+
+.slideon h1 {
+	height: inherit;
+	color: #fff;
+	font-size: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*하단버튼*/
+
+#slideShowon .slideon_btn {
+	position: absolute;
+	bottom: 20px;
+	left: 420px;
+}
+
+#slideShowon .slideon_btn ul li {
+	float: left;
+	background: #000;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin: 0 7px;
+	cursor: pointer;
+}
+
+#slideShowon .slideon_btn ul li.activeon {
+	background: #ff6600;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+/*좌우버튼*/
+.sideon_btn .preon {
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+.sideon_btn .nexon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 30px;
+	cursor: pointer;
 }
