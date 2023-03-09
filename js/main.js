@@ -9,7 +9,7 @@ $(document).ready(function () {
     $(this).find(".main .sub").stop().slideUp();
     $(".sub_bgbox").stop().slideUp();
   });
-
+});
 
   //________________________________________________________________________________
 
@@ -72,6 +72,51 @@ $(document).ready(function () {
   timer1=setInterval(autoImg,4000); 
   timer2=setInterval(autoText,4000); 
 
+  
+//좌우버튼 클릭시.....
+$rbtn.click(function(){
+
+  clearInterval(timer1);
+  clearInterval(timer2);
+
+  newImg++;
+  if(newImg>imgCount-1){ 
+    newImg=0;
+  }
+  changeImg(newImg);
+
+  newText++;
+  if(newText>textCount-1){ 
+    newText=0;
+  }
+  changeText(newText);
+
+  timer1=setInterval(autoImg,4000); 
+  timer2=setInterval(autoText,4000); 
+
+});
+
+$lbtn.click(function(){
+
+  clearInterval(timer1);
+  clearInterval(timer2);
+
+  newImg--;
+  if(newImg<0){ 
+    newImg=imgCount-1;
+  }
+  changeImg(newImg);
+
+  newText--;
+  if(newText>textCount-1){ 
+    newText=textCount-1;
+  }
+  changeText(newText);
+
+  timer1=setInterval(autoImg,4000); 
+  timer2=setInterval(autoText,4000); 
+
+});
   //________________________________________________________________________________
 
   

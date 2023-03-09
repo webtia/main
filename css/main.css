@@ -38,11 +38,12 @@ nav h1{  /* logo */
   color: #212121;
   line-height:80px;
 /*   border: 1px solid purple; */
-  
 }
+
 /* Main Menu */
 .gnb{
   display: flex;
+  border-bottom: 1px solid #cacaca;
   /* border: 1px solid yellow; */
 }
 
@@ -64,7 +65,7 @@ nav h1{  /* logo */
   /* border: 1px solid purple; */
 }
 
-.gnb>.main:hover>a{color: #337ab7;}
+.gnb>.main:hover>a{color: #048aff;}
 
 /* Sub Menu */
 .sub{
@@ -72,13 +73,12 @@ nav h1{  /* logo */
   position: absolute;
   top: 100%;
   z-index: 200;
-  padding-top: 10px;
+  /* padding-top: 10px; */
   width: 150px;
   height: 220px;
+  /* border-left:solid 1px #cacaca; */
   
 }
-
-
 .sub li{
   width: inherit;
   height: 40px;
@@ -88,14 +88,13 @@ nav h1{  /* logo */
   transition: 0.35s;
 }
 .sub li a{
-  color: #666;
-  font-size: 14px;
-  
-   
+  color: #000;
+  font-size: 15px;
+  font-weight: 800;
 }
 .sub li:hover a{
-  color: #000;
-  font-weight: 600;
+  color: #048aff;;
+  font-weight: 800;
 }
 
 /*100%서브배경박스*/
@@ -105,45 +104,44 @@ nav h1{  /* logo */
   top: 100%;
   left: 0;
 	width:100%;
-	height:230px; 
-	background: #e0e0e0;
+	height:180px; 
+ 	background: #fff;
+  z-index: 100;
 
 }
-
 
 /* ★★ visual 3-메인비주얼 fade3적용 ★★*/
 
-
 .fadeShow{
   /* position:fixed;   */
-  border-top: 1px solid #cacaca;
-	width:100%;
+ 	width:100%;
 	height:100vh;
 	margin:auto;
-}
+  top:160px;
+	left:0;
+  }
 /*(1)이미지 모두 동일한 위치,안보이게 함*/ 
 .changeimg ul li{ 
 	opacity:0;  
 	position:absolute;
-	top:180px;
+	top:160px;
 	left:0;
   width: 100%;
   height:100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  transform:scale(1.1);
+  transform:scale(0.8);
   transition:all 1.5s;
 }
 .changeimg ul li.imgVisible{   /*->jQuery 에서 불러냄*/
   opacity:1;
-  z-index:1000; 
+  z-index:50; 
   transform:scale(1);
 }
 
 .changeimg ul li:nth-child(1){background-image:url(../image/dentist_01.png);}
 .changeimg ul li:nth-child(2){background-image:url(../image/dentist_02.png);}
 .changeimg ul li:nth-child(3){background-image:url(../image/dentist_03.png);}
-.changeimg ul li:nth-child(4){background-image:url(../image/dentist_04.png);}
 
 /*좌우버튼*/
 .icon{
@@ -218,16 +216,14 @@ nav h1{  /* logo */
 
 
 
-
-
-
 /* Greeting Menu */
 .greeting{
   justify-content: center;
   text-align: center;
-   padding: 80px 0px;
+   margin: 50px 0px;
    width: 100%;
    height: 300px;
+
    
 }
 .greeting h2{
@@ -263,7 +259,7 @@ nav h1{  /* logo */
 	width: 720px;
 	height: 524px;
 	margin: 0 auto;
-  padding: 80px 0;
+  /* padding: 80px 0; */
   
   }
 
