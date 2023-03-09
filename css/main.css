@@ -3,14 +3,14 @@
 
 body{
   font-family: montserrat;
-}
+ }
 
 header{
   width: 100%;
   height: 135px;
   /* background-color: #2b2f3a; */
   position: relative;
-  z-index: 200; /* 메뉴가 맨위로 올라오게 함 */
+  z-index: 100; /* 메뉴가 맨위로 올라오게 함 */
 }
 
 nav{
@@ -27,9 +27,12 @@ nav{
   margin: 0 auto;
 }
 
+.padding{
+  padding: 10px;
+}
 
-/* ★★ Main Menu - 제이쿼리(메뉴7-풀다운메뉴 적용) ★ */
-nav h1{
+/* ★★ Main Menu - 제이쿼리(2 메뉴 - menu7.풀다운메뉴 적용) ★ */
+nav h1{  /* logo */
   font-size: 35px;
   font-weight: bold;
   color: #212121;
@@ -37,6 +40,7 @@ nav h1{
 /*   border: 1px solid purple; */
   
 }
+/* Main Menu */
 .gnb{
   display: flex;
   /* border: 1px solid yellow; */
@@ -71,7 +75,10 @@ nav h1{
   padding-top: 10px;
   width: 150px;
   height: 220px;
+  
 }
+
+
 .sub li{
   width: inherit;
   height: 40px;
@@ -83,7 +90,7 @@ nav h1{
 .sub li a{
   color: #666;
   font-size: 14px;
-  z-index: 200;
+  
    
 }
 .sub li:hover a{
@@ -91,6 +98,7 @@ nav h1{
   font-weight: 600;
 }
 
+/*100%서브배경박스*/
 .sub_bgbox{ 
   display:none;
   position: absolute;
@@ -99,7 +107,7 @@ nav h1{
 	width:100%;
 	height:230px; 
 	background: #e0e0e0;
-  z-index: 100;
+
 }
 
 
@@ -113,7 +121,6 @@ nav h1{
 	height:100vh;
 	margin:auto;
 }
-
 /*(1)이미지 모두 동일한 위치,안보이게 함*/ 
 .changeimg ul li{ 
 	opacity:0;  
@@ -133,10 +140,10 @@ nav h1{
   transform:scale(1);
 }
 
-.changeimg ul li:nth-child(1){background-image:url(../image/dentist_01.avif);}
-.changeimg ul li:nth-child(2){background-image:url(../image/dentist_02.avif);}
-.changeimg ul li:nth-child(3){background-image:url(../image/dentist_03.avif);}
-.changeimg ul li:nth-child(4){background-image:url(../image/dentist_04.avif);}
+.changeimg ul li:nth-child(1){background-image:url(../image/dentist_01.png);}
+.changeimg ul li:nth-child(2){background-image:url(../image/dentist_02.png);}
+.changeimg ul li:nth-child(3){background-image:url(../image/dentist_03.png);}
+.changeimg ul li:nth-child(4){background-image:url(../image/dentist_04.png);}
 
 /*좌우버튼*/
 .icon{
@@ -218,9 +225,9 @@ nav h1{
 .greeting{
   justify-content: center;
   text-align: center;
-   padding: 100px 0px;
+   padding: 80px 0px;
    width: 100%;
-   height: 500px;
+   height: 300px;
    
 }
 .greeting h2{
@@ -248,21 +255,23 @@ nav h1{
 .greeting h3:nth-child(4){margin-bottom: 50px;}
 
 
-/* ★★ 제이쿼리 슬라이드5 적용 ★★  */
+/* Greeting Menu - ★★ 3-메인비주얼 slide5 적용 ★★  */
 #slideShowon {
 	position: relative;
 	/*부모기준설정*/
 	overflow: hidden;
-	width: 1000px;
+	width: 720px;
 	height: 524px;
 	margin: 0 auto;
-}
+  padding: 80px 0;
+  
+  }
 
 #slideShowon .slideon ul {
 	display: flex;
 	position: absolute;
 	width: 3600px;
-	/*슬라이드가 가로방향일때만->이미지의 총가로길이(940*5)*/
+ 	/*슬라이드가 가로방향일때만->이미지의 총가로길이(940*5)*/
 }
 
 #slideShowon .slideon ul li {
@@ -270,30 +279,6 @@ nav h1{
 	width: 1000px;
 	height: 500px;
 }
-
-/* #slideShowon .slideon ul .i1 {
-	background: url(../image/image/greeting_01.jpg);
-}
-
-#slideShowon .slideon ul .i2 {
-	background: url(../image/image/greeting_02.jpg);
-}
-
-#slideShowon .slideon ul .i3 {
-	background: url(../image/image/greeting_03.jpg);
-}
-
-#slideShowon .slideon ul .i4 {
-	background: url(../image/image/greeting_04.jpg);
-}
-
-#slideShowon .slideon ul .i5 {
-	background: url(../image/image/greeting_05.jpg);
-}
-
-#slideShowon .slideon ul .i6 {
-	background: url(../image/image/greeting_06.jpg);
-} */
 
 .slideon h1 {
 	height: inherit;
@@ -309,7 +294,7 @@ nav h1{
 #slideShowon .slideon_btn {
 	position: absolute;
 	bottom: 20px;
-	left: 420px;
+	left: 50%;
 }
 
 #slideShowon .slideon_btn ul li {
@@ -345,3 +330,73 @@ nav h1{
 	right: 30px;
 	cursor: pointer;
 }
+
+
+/* ----- special------ */
+
+.special{
+   justify-content: center;
+   text-align: center;
+   }
+
+.special .title{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.special span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #363636;
+  font-weight:500;
+  padding: 20px 0;
+}
+
+.special strong{
+  color: #337ab7;
+  font-size: 24px;
+  font-weight:700;
+}
+
+.special p{
+  color: #959595;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.lbar{
+  width: 500px;
+  height: 3px;
+  margin-left: 100px;
+  background: #337ab7;
+}
+
+.rbar{
+  width: 500px;
+  height: 3px;
+  margin-right: 100px;
+  background: #337ab7;
+  margin-bottom: 100px;
+}
+
+
+/* ----- media------ */
+
+.media{
+  width: 100%;
+  height: 500px;
+  background: #174d7c;
+  padding: 100px 0;
+}
+.media p{
+  color: #fff;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  
+}
+
+
+

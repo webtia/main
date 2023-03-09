@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
+/* ★★ Main Menu - 제이쿼리(2 메뉴 - menu7.풀다운메뉴 적용) ★ */
 
-  /* ★★ 메뉴 ★★  */
   $(".gnb").hover(function(){ //주메뉴영역전체에 오버시 
     $(this).find(".main .sub").stop().slideDown();
     $(".sub_bgbox").stop().slideDown();
@@ -11,7 +11,10 @@ $(document).ready(function () {
   });
 
 
-  /* ★★ 비쥬얼 ★★ */
+  //________________________________________________________________________________
+
+
+  /* ★★ visual 3-메인비주얼 fade3적용 ★★*/ 
 
   let $img = $(".changeimg ul li");
   let $text = $(".changeimg ul li .des");
@@ -55,7 +58,7 @@ $(document).ready(function () {
 		}
 		changeImg(newImg);
 
-  }
+  };
   function autoText(){
 
     newText++;
@@ -64,15 +67,16 @@ $(document).ready(function () {
 		}
 		changeText(newText)
 
-  }
+  };
 
   timer1=setInterval(autoImg,4000); 
   timer2=setInterval(autoText,4000); 
 
-
+  //________________________________________________________________________________
 
   
-/* ★★ 소개 ★★ */  
+/* Greeting Menu - ★★ 3-메인비주얼 slide5 적용 ★★   */
+
 let imgon_w= $(".slideon ul li").width();   //이미지의 가로너비
 	let imgon_n= $(".slideon ul li").length;  //이미지의 총개수  
   let soldidxon=0;  //기존이미지
@@ -178,9 +182,11 @@ let imgon_w= $(".slideon ul li").width();   //이미지의 가로너비
 
     for (let i=1; i<=sindexon+1;i++) {
 			slideonImg(sindexon,1);
-		};
+		}
 
     timeron=setInterval(slideonAuto,4000);
+
+  //________________________________________________________________________________
 
 
 });
