@@ -230,14 +230,17 @@ nav h1{  /* logo */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 500px;
  }
 
 .container{
-  width: 100%;
+  width: 632px;
   height: 500px;
   background: url(../image/special_01.png) no-repeat ;
   position: absolute;
+  top: 1250px;
+  left: 0;
+  border: 1px solid #fff;
 }
 .container h2{
   color: #fff;
@@ -248,10 +251,12 @@ nav h1{  /* logo */
 
 .card{
   position: relative;
-  width: 800px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   border-radius: 5px;
   margin: 10px;
+  top: 50px;
+  left: 200px;
   overflow: hidden;
   transition: 0.5s;
   background: #ebebeb;
@@ -311,14 +316,13 @@ nav h1{  /* logo */
 .card:nth-child(4) .content{background: linear-gradient(to top, rgb(42, 175, 135), transparent);}
 
 
-/* .content h2 span{
+.content h2 span{
   display: block;
   font-size: 14px;
   color: gold;
   margin-top: 10px;
   font-weight: bold;
-} */
-
+}
 
 .greeting p:nth-child(4){margin-bottom: 20px;}
 .greeting h3{
@@ -417,16 +421,32 @@ nav h1{  /* logo */
 /* ----- special------ */
 
 .special{
+
+   padding: 50px;
+   display: flex; /* 부모한테 가운데 정렬 적용  */
    justify-content: center;
-   text-align: center;
+   align-items: center;
    }
 
-.special .title{
+.title{
   font-size: 38px;
   font-weight: 520;
+  display: block;
+
 }
 
-.special span{
+.circle{
+  background: #e0e0e0;
+  border-radius: 50%;
+  width: 300px;
+	height: 300px;
+  margin: 20px;
+  /* overflow: hidden; */
+  text-align: center;
+
+}
+
+.circle span{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -436,32 +456,17 @@ nav h1{  /* logo */
   padding: 20px 0;
 }
 
-.special strong{
+.circle strong{
   color: #337ab7;
   font-size: 24px;
   font-weight:700;
 }
 
-.special p{
+.circle p{
   color: #959595;
   font-size: 16px;
   font-weight: 500;
 }
-
-.lbar{
-  width: 500px;
-  height: 3px;
-  margin-left: 100px;
-  background: #337ab7;
-}
-
-.rbar{
-  width: 500px;
-  height: 3px;
-  margin-right: 100px;
-  background: #337ab7;
-}
-
 
 /* ----- media------ */
 
