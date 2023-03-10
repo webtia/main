@@ -263,15 +263,24 @@ nav h1{  /* logo */
 #slideShowon {
 	position: relative;
 	/*부모기준설정*/
-	overflow: hidden;
-	width: 720px;
+ 	width: 720px;
 	height: 524px;
 	margin: 0 auto;
   }
 
+  #slideShowon .slideon{
+    position: relative;
+    overflow: hidden;
+    width: 720px;
+    height: 524px;
+    margin: 0 auto;
+    }
+
+
 #slideShowon .slideon ul {
 	display: flex;
 	position: absolute;
+ 
 	width: 3600px;
  	/*슬라이드가 가로방향일때만->이미지의 총가로길이(940*5)*/
 }
@@ -295,13 +304,13 @@ nav h1{  /* logo */
 
 #slideShowon .slideon_btn {
 	position: absolute;
-	bottom: 20px;
-	left: 50%;
+	bottom: -30px;
+	left: 45%;
 }
 
 #slideShowon .slideon_btn ul li {
 	float: left;
-	background: #000;
+	background: #929292;
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
@@ -310,7 +319,7 @@ nav h1{  /* logo */
 }
 
 #slideShowon .slideon_btn ul li.activeon {
-	background: #ff6600;
+	background: #048aff;
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
@@ -320,16 +329,16 @@ nav h1{  /* logo */
 .sideon_btn .preon {
 	position: absolute;
 	top: 50%;
-	left: -5px;
+  left: -100px;
 	transform: translateY(-50%);
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .sideon_btn .nexon {
 	position: absolute;
 	top: 50%;
+  right: -100px;
 	transform: translateY(-50%);
-	right: 30px;
 	cursor: pointer;
 }
 
