@@ -27,8 +27,10 @@ nav{
   margin: 0 auto;
 }
 
-.padding{
-  padding: 10px;
+.blank{
+  width: 100%;
+  height: 150px;
+  background: #fff;
 }
 
 /* ★★ Main Menu - 제이쿼리(2 메뉴 - menu7.풀다운메뉴 적용) ★ */
@@ -173,13 +175,18 @@ nav h1{  /* logo */
 /*비주얼 텍스트 공통*/
 .des{  /*시작위치의 텍스트->Y축으로 20% 지점*/
   position:absolute;
-  top:50%;
+  top:55.5%;
   left:50%;
   transform: translate(-50%,-10%);
   color: #fff;
-  text-align: center;
   opacity: 0;
   transition:all 1s;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+  width: 1500px;
+  height: 250px;
 }
 .des.textVisible{ /*->jQuery 에서 불러냄*/
   opacity: 1;
@@ -190,13 +197,16 @@ nav h1{  /* logo */
   font-size: 52px;
   text-shadow:0 0 10px #000;
   font-family: 'Nanum Myeongjo', serif;
-  margin-bottom: 20px;
+  margin: 40px;
   font-weight: 700;
   letter-spacing: 20px;
 }
 .des p{
-  font-size: 17px;
-  line-height: 30px;
+  font-size: 30px;
+  line-height: 30px; 
+  top: 50%;
+  left: 50%; 
+
 }
 .des p:nth-of-type(3){
   width:150px;
@@ -212,8 +222,6 @@ nav h1{  /* logo */
 .des p:nth-of-type(3):hover{
   background:rgba(0,0,0,0.6);
 }
-
-
 
 
 /* Greeting Menu */
@@ -259,8 +267,6 @@ nav h1{  /* logo */
 	width: 720px;
 	height: 524px;
 	margin: 0 auto;
-  /* padding: 80px 0; */
-  
   }
 
 #slideShowon .slideon ul {
@@ -314,7 +320,7 @@ nav h1{  /* logo */
 .sideon_btn .preon {
 	position: absolute;
 	top: 50%;
-	left: 30px;
+	left: -5px;
 	transform: translateY(-50%);
 	cursor: pointer;
 }
@@ -374,7 +380,6 @@ nav h1{  /* logo */
   height: 3px;
   margin-right: 100px;
   background: #337ab7;
-  margin-bottom: 100px;
 }
 
 
