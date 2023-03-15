@@ -405,6 +405,7 @@ nav h1 {
 
 /* Greeting Menu - ★★ 3-메인비주얼 slide5 적용 ★★  */
 
+
 #slideShowon {
   position: relative;
   /*부모기준설정*/
@@ -418,7 +419,7 @@ nav h1 {
   overflow: hidden;
   width: 720px;
   height: 524px;
-  margin: 0 auto;
+  margin: 50px 0px auto;
 }
 
 
@@ -478,7 +479,6 @@ nav h1 {
   transform: translateY(-50%);
   cursor: pointer;
 }
-
 .sideon_btn .nexon {
   position: absolute;
   top: 50%;
@@ -487,8 +487,14 @@ nav h1 {
   cursor: pointer;
 }
 
-
 /* ----- special------ */
+.title {
+  font-size: 38px;
+  font-weight: 520;
+  display: block;
+  color: #353535;
+ text-align: center;
+  }
 
 .special {
   padding: 50px;
@@ -498,14 +504,9 @@ nav h1 {
   align-items: center;
 }
 
-.title {
-  font-size: 38px;
-  font-weight: 520;
-  display: block;
-}
 
 .circle {
-  background: #e0e0e0;
+  background: rgba(133, 133, 133, 0.1);
   border-radius: 50%;
   width: 300px;
   height: 300px;
@@ -514,8 +515,13 @@ nav h1 {
   text-align: center;
   justify-content: center;
   position: relative;
-  margin: auto;
   z-index: 100;
+  border: 1px solid #64bbc5;
+  transition: 0.3s;
+}
+
+.circle:hover {
+  transform: translateY(-10%);
 }
 
 .circle .nemo {
@@ -524,9 +530,7 @@ nav h1 {
   background: #64bbc5;
   position: absolute;
   z-index: 100;
-  left: 10px;
-  
-
+  left: 5px;
 }
 
 .circle strong {
@@ -543,23 +547,20 @@ nav h1 {
 
 .circle h3 {
   font-size: 16px;
-  color: #363636;
+  color: #cf1009;;
   font-weight: 600;
   top: 40%;
   position: absolute;
-  left: 20%;
-  transform: traslateX(-50%);
+  display: block;
+  width: 100%;
   z-index: 100;
 }
-
-
-
 
 .circle p {
   display: inline-block;
   color: #959595;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   position: absolute;
   z-index: 400;
   top: 50%;
