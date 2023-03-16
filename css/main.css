@@ -604,14 +604,22 @@ nav h1 {
 }
 
 .cbox {
+  position: relative;
   display: inline-block;
   width: 600px;
   margin: 0px auto;
   overflow: hidden;
+  box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
 .cbox:hover img{
   transform:scale(1.2) ;
+}
+
+.cbox:before {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .cbox img{
@@ -625,7 +633,7 @@ nav h1 {
 .cbox:nth-of-type(2),
 .cbox:nth-child(4){
   padding: 100px 0px 0px 50px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   overflow: hidden;
 }
 
